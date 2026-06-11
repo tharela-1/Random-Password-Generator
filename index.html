@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="head">
+            <span class="heading">Random Password Generator</span>
+        </div>
+        <hr class="line">
+        <br>
+        <form>
+            <span class="secHead">Choose the Password length from the below slider:</span>
+            <br><br>
+            <div class="inputFields">
+                <input type="number" readonly id="result" value="8" class="inputObj" required>
+                <input type="range" min="8" max="32" step="1" value="8" class="inputObj" id="slide">
+            </div>
+            <br>
+            <span class="secHead">Choose the following options according to your choice (Choose at least 1 option)</span>
+            <br><br>
+            <input type="checkbox" name="check1" id="uc" value="uc" checked>
+            <label for="check1" class="checkHead">Password has Upper Case characters</label>
+            <br>
+            <input type="checkbox" name="check2" id="lc" value="lc" checked>
+            <label for="check2" class="checkHead">Passwod has Lower Case characters</label>
+            <br>
+            <input type="checkbox" name="check3" id="dc" value="dc" checked>
+            <label for="check3" class="checkHead">Password has Digits</label>
+            <br>
+            <input type="checkbox" name="check4" id="splc" value="splc" checked>
+            <label for="check4" class="checkHead">Password has Special characters</label>
+            <br>
+            <br>
+            <hr class="line">
+            <br>
+            <span class="secHead">Get the output Password below</span>
+            <br><br>
+            <input type="text" readonly id="output" placeholder="Get output here..." class="inputObj">
+            <br><br>
+            <hr class="line">
+            <br>
+            <button type="button" onclick="generate()" class="actionObj" id="genPass">Generate Password</button>
+            <input type="reset" class="actionObj" id="reset1">
+            <button type="button" onclick="copyFn()" id="btn" class="actionObj">Copy Text</button>
+        </form>
+        <hr class="line">
+        <b class="secHead">NOTE: Passwords are generated locally in your browser. Generated passwords are not stored and not transmitted to any 
+            server.</b>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
